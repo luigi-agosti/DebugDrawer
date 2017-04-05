@@ -23,17 +23,17 @@ import io.palaima.debugdrawer.commons.BuildModule;
 import io.palaima.debugdrawer.commons.DeviceModule;
 import io.palaima.debugdrawer.commons.NetworkModule;
 import io.palaima.debugdrawer.commons.SettingsModule;
-import io.palaima.debugdrawer.fps.FpsModule;
+//import io.palaima.debugdrawer.fps.FpsModule;
 import io.palaima.debugdrawer.location.LocationModule;
 import io.palaima.debugdrawer.okhttp3.OkHttp3Module;
 import io.palaima.debugdrawer.picasso.PicassoModule;
 import io.palaima.debugdrawer.scalpel.ScalpelModule;
-import io.palaima.debugdrawer.timber.TimberModule;
+//import io.palaima.debugdrawer.timber.TimberModule;
 import io.palaima.debugdrawer.view.DebugView;
-import jp.wasabeef.takt.Takt;
+//import jp.wasabeef.takt.Takt;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
-import timber.log.Timber;
+//import timber.log.Timber;
 
 public class DebugViewActivity extends AppCompatActivity {
 
@@ -87,11 +87,11 @@ public class DebugViewActivity extends AppCompatActivity {
 
         debugView.modules(
             new ActionsModule(switchAction, buttonAction, spinnerAction),
-            new FpsModule(Takt.stock(getApplication())),
+//            new FpsModule(Takt.stock(getApplication())),
             new PicassoModule(picasso),
             new LocationModule(this),
             new ScalpelModule(this),
-            new TimberModule(),
+//            new TimberModule(),
             new OkHttp3Module(okHttpClient),
             new DeviceModule(this),
             new BuildModule(this),
@@ -103,12 +103,12 @@ public class DebugViewActivity extends AppCompatActivity {
     }
 
     private void showDummyLog() {
-        Timber.d("Debug");
-        Timber.e("Error");
-        Timber.w("Warning");
-        Timber.i("Info");
-        Timber.v("Verbose");
-        Timber.wtf("WTF");
+//        Timber.d("Debug");
+//        Timber.e("Error");
+//        Timber.w("Warning");
+//        Timber.i("Info");
+//        Timber.v("Verbose");
+//        Timber.wtf("WTF");
     }
 
     @Override protected void onResume() {

@@ -27,16 +27,15 @@ import io.palaima.debugdrawer.commons.BuildModule;
 import io.palaima.debugdrawer.commons.DeviceModule;
 import io.palaima.debugdrawer.commons.NetworkModule;
 import io.palaima.debugdrawer.commons.SettingsModule;
-import io.palaima.debugdrawer.fps.FpsModule;
 import io.palaima.debugdrawer.glide.GlideModule;
 import io.palaima.debugdrawer.location.LocationModule;
 import io.palaima.debugdrawer.okhttp3.OkHttp3Module;
 import io.palaima.debugdrawer.scalpel.ScalpelModule;
-import io.palaima.debugdrawer.timber.TimberModule;
-import jp.wasabeef.takt.Takt;
+//import io.palaima.debugdrawer.timber.TimberModule;
+//import jp.wasabeef.takt.Takt;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
-import timber.log.Timber;
+//import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -79,10 +78,10 @@ public class MainActivity extends AppCompatActivity {
         debugDrawer = new DebugDrawer.Builder(this).modules(
             new GlideModule(Glide.get(this)),
             new ActionsModule(switchAction, buttonAction, spinnerAction),
-            new FpsModule(Takt.stock(getApplication())),
+//            new FpsModule(Takt.stock(getApplication())),
             new LocationModule(this),
             new ScalpelModule(this),
-            new TimberModule(),
+//            new TimberModule(),
             new OkHttp3Module(okHttpClient),
             new DeviceModule(this),
             new BuildModule(this),
@@ -102,12 +101,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showDummyLog() {
-        Timber.d("Debug");
-        Timber.e("Error");
-        Timber.w("Warning");
-        Timber.i("Info");
-        Timber.v("Verbose");
-        Timber.wtf("WTF");
+//        Timber.d("Debug");
+//        Timber.e("Error");
+//        Timber.w("Warning");
+//        Timber.i("Info");
+//        Timber.v("Verbose");
+//        Timber.wtf("WTF");
     }
 
     @Override

@@ -4,8 +4,8 @@ import android.app.Application;
 
 import com.squareup.leakcanary.LeakCanary;
 
-import io.palaima.debugdrawer.timber.data.LumberYard;
-import timber.log.Timber;
+//import io.palaima.debugdrawer.timber.data.LumberYard;
+//import timber.log.Timber;
 
 
 /**
@@ -19,10 +19,10 @@ public class DebugDrawerApplication extends Application {
         super.onCreate();
         LeakCanary.install(this);
 
-        LumberYard lumberYard = LumberYard.getInstance(this);
-        lumberYard.cleanUp();
+//        LumberYard lumberYard = LumberYard.getInstance(this);
+//        lumberYard.cleanUp();
 
-        Timber.plant(lumberYard.tree());
-        Timber.plant(new Timber.DebugTree());
+//        Timber.plant(lumberYard.tree());
+//        Timber.plant(new Timber.DebugTree());
     }
 }
